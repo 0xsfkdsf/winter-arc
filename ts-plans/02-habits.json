@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TestSprite/testsprite-cli/v0.13.0/schemas/plan.schema.json",
+  "projectId": "4ab5796a-8e4b-4308-97cf-1454ea55e6ee",
+  "type": "frontend",
+  "name": "Daily habit tracking updates progress",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "Complete onboarding to reach the Today page. Click the Quran habit row once, then click the Social Media avoidance row twice."
+    },
+    {
+      "type": "assertion",
+      "description": "Today progress shows 1 completed practice out of the total, and the Social Media row shows the Slip state with a message to continue rather than any shaming language."
+    }
+  ]
+}

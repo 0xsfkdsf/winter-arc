@@ -1,0 +1,62 @@
+{
+  "name": "winter-arc",
+  "version": "1.0.9",
+  "description": "Winter Arc — personal discipline and transformation system for Windows",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build:web": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "electron:dev": "vite --port 5173",
+    "dist": "npm run build:web && electron-builder --win nsis portable",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "lucide-react": "^0.469.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sql.js": "^1.12.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "^34.0.0",
+    "electron-builder": "^25.1.8",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7",
+    "vitest": "^2.1.8"
+  },
+  "build": {
+    "appId": "com.winterarc.app",
+    "productName": "WinterArc",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**",
+      "electron/**",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "artifactName": "${productName}-${version}-${target}.${ext}",
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "shortcutName": "Winter Arc",
+      "artifactName": "WinterArc-Setup-${version}.exe"
+    },
+    "portable": {
+      "artifactName": "WinterArc-Portable-${version}.exe"
+    }
+  }
+}

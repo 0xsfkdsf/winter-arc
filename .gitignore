@@ -1,0 +1,18 @@
+# Build + runtime outputs (binaries ship via GitHub Releases, never in git)
+node_modules/
+dist/
+release/
+*.log
+
+# Personal data — NEVER commit
+backups/
+*.sqlite
+*.sqlite.tmp
+*.db
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+test-results/
+playwright-report/

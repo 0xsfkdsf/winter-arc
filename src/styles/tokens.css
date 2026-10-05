@@ -1,0 +1,72 @@
+/* Winter Arc design tokens — "Quiet Momentum" */
+:root {
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-micro: 130ms;
+  --dur-normal: 220ms;
+  --dur-emphasis: 420ms;
+
+  --r-panel: 16px;
+  --r-control: 10px;
+  --r-pill: 999px;
+
+  --font-latin: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-arabic: 'Readex Pro', 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Cascadia Code', Consolas, monospace;
+
+  /* dark (default, designed first) */
+  --bg-0: #070b14;
+  --bg-1: #0b1220;
+  --surface: rgba(17, 26, 45, 0.72);
+  --surface-solid: #111a2d;
+  --surface-2: #18233b;
+  --surface-3: #1e2c48;
+  --border: rgba(148, 163, 184, 0.14);
+  --border-soft: rgba(148, 163, 184, 0.08);
+  --text-1: #e9eff9;
+  --text-2: #9dadc9;
+  --text-3: #64748f;
+  --frost: #93b4fd;
+  --frost-strong: #b9cdfd;
+  --frost-glow: rgba(147, 180, 253, 0.28);
+  --aurora: #5eead4;
+  --ember: #f0c48a;
+  --success: #6ee7b7;
+  --warn: #fcd34d;
+  --danger: #f38ba8;
+  --shadow-float: 0 8px 30px rgba(2, 6, 17, 0.35);
+  --ambient-a: radial-gradient(900px 480px at 12% -8%, rgba(99, 102, 241, 0.16), transparent 60%);
+  --ambient-b: radial-gradient(700px 420px at 88% 4%, rgba(94, 234, 212, 0.07), transparent 60%);
+  --scheme: dark;
+  color-scheme: dark;
+}
+
+[data-theme='light'] {
+  --bg-0: #eef2f9;
+  --bg-1: #f7f9fd;
+  --surface: rgba(255, 255, 255, 0.86);
+  --surface-solid: #ffffff;
+  --surface-2: #eef3fa;
+  --surface-3: #e3eaf6;
+  --border: #e2e8f2;
+  --border-soft: #edf1f8;
+  --text-1: #0e172a;
+  --text-2: #475569;
+  --text-3: #8a99b3;
+  --frost: #2f54eb;
+  --frost-strong: #1e3fd1;
+  --frost-glow: rgba(47, 84, 235, 0.14);
+  --aurora: #0e9f8a;
+  --ember: #b45309;
+  --success: #047857;
+  --warn: #b45309;
+  --danger: #be123c;
+  --shadow-float: 0 10px 32px rgba(15, 23, 42, 0.1);
+  --ambient-a: radial-gradient(900px 480px at 12% -8%, rgba(47, 84, 235, 0.08), transparent 60%);
+  --ambient-b: radial-gradient(700px 420px at 88% 4%, rgba(14, 159, 138, 0.07), transparent 60%);
+  --scheme: light;
+  color-scheme: light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-micro: 1ms; --dur-normal: 1ms; --dur-emphasis: 1ms; }
+}

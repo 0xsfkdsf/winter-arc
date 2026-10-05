@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TestSprite/testsprite-cli/v0.13.0/schemas/plan.schema.json",
+  "projectId": "4ab5796a-8e4b-4308-97cf-1454ea55e6ee",
+  "type": "frontend",
+  "name": "Study workspace full task lifecycle",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "Complete onboarding, open Study from the sidebar. Add a new subject named Biology. Select Mathematics, create a task titled Probe Task, edit its title, delete the task using the two-step delete confirm, then delete the Biology subject through its delete confirmation dialog."
+    },
+    {
+      "type": "assertion",
+      "description": "The Biology subject no longer appears, the Probe Task is gone, and the app shows no errors or broken layouts."
+    }
+  ]
+}

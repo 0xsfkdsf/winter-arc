@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TestSprite/testsprite-cli/v0.13.0/schemas/plan.schema.json",
+  "projectId": "4ab5796a-8e4b-4308-97cf-1454ea55e6ee",
+  "type": "frontend",
+  "name": "Focus session finishes into timeline with prayer anchors",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "Complete onboarding, press the Focus button to start a quick focus session. Pause the timer, resume it with Continue, then finish the session early. Open the Timeline page."
+    },
+    {
+      "type": "assertion",
+      "description": "The finished session appears as a timeline entry, and five prayer markers for Fajr, Dhuhr, Asr, Maghrib and Isha with Arabic names are visible on the timeline."
+    }
+  ]
+}
